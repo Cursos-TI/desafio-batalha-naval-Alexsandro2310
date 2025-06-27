@@ -2,6 +2,7 @@
 
 // Tamanho fixo do tabuleiro
 #define TAMANHO 10
+#define NAVIO 3 // ← LINHA NOVA: Define o tamanho fixo dos navios
 
 int main() {
     // Matriz 10x10 representando o tabuleiro (inicialmente só com água = 0)
@@ -55,6 +56,7 @@ int main() {
 
     // Exibindo o tabuleiro com cabeçalho de letras
     printf("=== Tabuleiro Batalha Naval ===\n\n");
+    
 
     // Imprime letras das colunas
     printf("   ");
