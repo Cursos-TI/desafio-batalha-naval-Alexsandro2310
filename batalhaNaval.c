@@ -33,7 +33,7 @@ int main() {
         return 1;
     }
 
-    sobreposicao = 0; // Reset da verificação de sobreposição
+    sobreposicao = 0; //  verificação de sobreposição
 
     // === NAVIO 2 - Vertical ===
     int linhaV = 5;
