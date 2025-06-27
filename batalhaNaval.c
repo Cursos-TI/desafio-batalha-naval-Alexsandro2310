@@ -75,11 +75,11 @@ int main() {
                 tabuleiro[linhaD1 + i][colunaD1 + i] = 3;
             }
         } else {
-            printf("Erro: Navio diagonal ↘ sobrepõe outro navio.\n");
+            printf("Erro: Navio diagonal  sobrepõe outro navio.\n");
             return 1;
         }
     } else {
-        printf("Erro: Navio diagonal ↘ fora dos limites.\n");
+        printf("Erro: Navio diagonal  fora dos limites.\n");
         return 1;
     }
 
@@ -100,11 +100,11 @@ int main() {
                 tabuleiro[linhaD2 + i][colunaD2 - i] = 3;
             }
         } else {
-            printf("Erro: Navio diagonal ↙ sobrepõe outro navio.\n");
+            printf("Erro: Navio diagonal  sobrepõe outro navio.\n");
             return 1;
         }
     } else {
-        printf("Erro: Navio diagonal ↙ fora dos limites.\n");
+        printf("Erro: Navio diagonal  fora dos limites.\n");
         return 1;
     }
 
