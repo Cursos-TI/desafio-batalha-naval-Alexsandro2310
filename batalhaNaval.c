@@ -2,19 +2,19 @@
 
 // Tamanho fixo do tabuleiro
 #define TAMANHO 10
-#define NAVIO 3 
+#define NAVIO 3 // Define o tamanho fixo dos navios
 
 int main() {
-    
+    // Matriz 10x10 representando o tabuleiro (0 = água, 3 = parte de navio)
     int tabuleiro[TAMANHO][TAMANHO] = {0};
 
-    int sobreposicao = 0; 
+    int sobreposicao = 0; // Variável para checar sobreposição
 
     // === NAVIO 1 - Horizontal ===
     int linhaH = 2;
     int colunaH = 4;
 
-    
+    // validação e posicionamento horizontal com verificação de sobreposição
     if (colunaH + NAVIO <= TAMANHO) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaH][colunaH + i] != 0)
@@ -33,13 +33,13 @@ int main() {
         return 1;
     }
 
-    sobreposicao = 0; 
+    sobreposicao = 0; // Reset da verificação de sobreposição
 
     // === NAVIO 2 - Vertical ===
     int linhaV = 5;
     int colunaV = 7;
 
-    
+    // validação e posicionamento vertical com verificação de sobreposição
     if (linhaV + NAVIO <= TAMANHO) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaV + i][colunaV] != 0)
@@ -58,13 +58,13 @@ int main() {
         return 1;
     }
 
-    sobreposicao = 0; 
+    sobreposicao = 0; // 
 
-    // === NAVIO 3 - Diagonal 
+    // === NAVIO 3 - Diagonal  (linha e coluna aumentam) ===
     int linhaD1 = 0;
     int colunaD1 = 0;
 
-    // posicionamento diagonal 
+    //  posicionamento diagonal 
     if (linhaD1 + NAVIO <= TAMANHO && colunaD1 + NAVIO <= TAMANHO) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaD1 + i][colunaD1 + i] != 0)
@@ -85,11 +85,11 @@ int main() {
 
     sobreposicao = 0; 
 
-    // === NAVIO 4 - Diagonal 
+    // === NAVIO 4 - Diagonal  (linha aumenta, coluna diminui) ===
     int linhaD2 = 1;
     int colunaD2 = 8;
 
-    
+    // posicionamento diagonal 
     if (linhaD2 + NAVIO <= TAMANHO && colunaD2 - (NAVIO - 1) >= 0) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaD2 + i][colunaD2 - i] != 0)
