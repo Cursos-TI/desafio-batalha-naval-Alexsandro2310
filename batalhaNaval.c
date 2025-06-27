@@ -2,19 +2,19 @@
 
 // Tamanho fixo do tabuleiro
 #define TAMANHO 10
-#define NAVIO 3 // ← LINHA NOVA: Define o tamanho fixo dos navios
+#define NAVIO 3 
 
 int main() {
-    // Matriz 10x10 representando o tabuleiro (0 = água, 3 = parte de navio)
+    
     int tabuleiro[TAMANHO][TAMANHO] = {0};
 
-    int sobreposicao = 0; // ← LINHA NOVA: Variável para checar sobreposição
+    int sobreposicao = 0; 
 
     // === NAVIO 1 - Horizontal ===
     int linhaH = 2;
     int colunaH = 4;
 
-    // ← BLOCO NOVO: validação e posicionamento horizontal com verificação de sobreposição
+    
     if (colunaH + NAVIO <= TAMANHO) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaH][colunaH + i] != 0)
@@ -33,13 +33,13 @@ int main() {
         return 1;
     }
 
-    sobreposicao = 0; // ← LINHA NOVA: Reset da verificação de sobreposição
+    sobreposicao = 0; 
 
     // === NAVIO 2 - Vertical ===
     int linhaV = 5;
     int colunaV = 7;
 
-    // ← BLOCO NOVO: validação e posicionamento vertical com verificação de sobreposição
+    
     if (linhaV + NAVIO <= TAMANHO) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaV + i][colunaV] != 0)
@@ -58,13 +58,13 @@ int main() {
         return 1;
     }
 
-    sobreposicao = 0; // ← LINHA NOVA
+    sobreposicao = 0; 
 
-    // === NAVIO 3 - Diagonal ↘ (linha e coluna aumentam) ===
+    // === NAVIO 3 - Diagonal 
     int linhaD1 = 0;
     int colunaD1 = 0;
 
-    // ← BLOCO NOVO: posicionamento diagonal ↘
+    // posicionamento diagonal 
     if (linhaD1 + NAVIO <= TAMANHO && colunaD1 + NAVIO <= TAMANHO) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaD1 + i][colunaD1 + i] != 0)
@@ -83,13 +83,13 @@ int main() {
         return 1;
     }
 
-    sobreposicao = 0; // ← LINHA NOVA
+    sobreposicao = 0; 
 
-    // === NAVIO 4 - Diagonal ↙ (linha aumenta, coluna diminui) ===
+    // === NAVIO 4 - Diagonal 
     int linhaD2 = 1;
     int colunaD2 = 8;
 
-    // ← BLOCO NOVO: posicionamento diagonal ↙
+    
     if (linhaD2 + NAVIO <= TAMANHO && colunaD2 - (NAVIO - 1) >= 0) {
         for (int i = 0; i < NAVIO; i++) {
             if (tabuleiro[linhaD2 + i][colunaD2 - i] != 0)
