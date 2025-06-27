@@ -8,6 +8,8 @@ int main() {
     // Matriz 10x10 representando o tabuleiro (inicialmente só com água = 0)
     int tabuleiro[TAMANHO][TAMANHO] = {0};
 
+    int sobreposicao = 0; // ← LINHA NOVA: Variável para checar sobreposição
+
     // Tamanho fixo dos navios
     int tamanhoNavio = 3;
 
